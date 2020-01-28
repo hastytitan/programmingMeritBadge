@@ -15,10 +15,10 @@ var bePrepared = function () {
        tempCWc = (5 / 9 * (wc - 32)).toFixed(1);
  
       // = = = = = = = evaluate the temp (three categories) = = = = = = =  
-      if (tempF < 60) {
+      if ((tempF < 60) && (tempF >= 0)) {
             myActionText = " Take long-johns!";
         }
-      if ((tempF >= 60) && (tempC < 75)) {
+      if ((tempF >= 60) && (tempF < 75)) {
                 myActionText = " Have Fun!";
         }
       if (tempF >= 75) {
@@ -26,7 +26,10 @@ var bePrepared = function () {
       }
       if (tempF >=100) {
                 myActionText = " Take water and stay hydrated!";    
-      }
+       }
+      if (tempF >= -50) {
+                myActionText = " stay indoors and keep warm!"
+        }
  
       // = = = = = = = build a complete sentence = = = = = = =  
       newText = "If the temperature is " + tempF + " &deg;F (" + tempC + " &deg;C) but it feels like " + wc.toFixed(2) + "&deg;F (" + tempCWc + " &deg;C)" + myActionText;

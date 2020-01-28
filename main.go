@@ -24,7 +24,7 @@ func main() {
 			fmt.Println("\nNot a valid number")
 			os.Exit(-1)
 		}
-
+		// wc := 13.2 + 0.6215*tempF + (0.3965*tempF-11.37)*math.Pow(tempWc, 0.16)
 		c = (f - 32) * 5 / 9
 		fmt.Printf("\nThe temperature in Celsius is: %v", c)
 
