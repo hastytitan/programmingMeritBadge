@@ -8,8 +8,6 @@ import (
 	"strings"
 )
 
-const lowTempFWarning float64 = 0
-const highTempFWarning float64 = 100
 const maxLoop int = 5
 
 func main() {
